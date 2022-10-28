@@ -32,11 +32,7 @@ public class AnalyticsCounter {
 				}
 				line = reader.readLine();	// get another symptom
 			}
-			reader.close();} 
-
-		catch (IOException e) {
-			e.printStackTrace();
-		}
+			reader.close();
 
 		// next generate output (write in results.out.txt)
 		FileWriter writer = new FileWriter ("Project02Eclipse\\results.out.txt");
@@ -44,6 +40,10 @@ public class AnalyticsCounter {
 		writer.write("headache: " + headacheCount + "\n");
 		writer.write("rash: " + rashCount + "\n");
 
-		writer.close();
+		writer.close();} 
+
+		catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
