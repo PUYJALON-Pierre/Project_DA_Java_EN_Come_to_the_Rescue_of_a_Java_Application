@@ -5,15 +5,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class SortSymptoms {
+public class SortSymptoms implements ISymptomSorter{
 
 
 
 	/*Création d'une map pour enlever les doublons et compter les occurences*/
-
+	
+	@Override
 	public Map <String, Integer> occurenceSymptomsMap() {
 
-		ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile("Project02Eclipse\\symptoms.txt");
+		ReadSymptomDataFromFile reader = new ReadSymptomDataFromFile(Execution.INPUTFILEPATH);
 
 		List<String> result  = reader.GetSymptoms();
 

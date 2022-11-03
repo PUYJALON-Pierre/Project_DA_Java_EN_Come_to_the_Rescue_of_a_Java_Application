@@ -5,17 +5,17 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
-public class WriteSymptoms {
+public class WriteSymptoms implements ISymptomWriter{
 
 	/*Ecriture dans le fichier*/
 
 	SortSymptoms occurenceSymptomesSort = new SortSymptoms();
 
-
+@Override
 	public void write() {
 		try {
 			FileWriter writer;
-			writer = new FileWriter("Project02Eclipse\\results.out.txt");
+			writer = new FileWriter(Execution.OUTPUTFILEPATH);
 
 			/*Efface les précédentes données du fichier resultout*/
 			writer.flush();

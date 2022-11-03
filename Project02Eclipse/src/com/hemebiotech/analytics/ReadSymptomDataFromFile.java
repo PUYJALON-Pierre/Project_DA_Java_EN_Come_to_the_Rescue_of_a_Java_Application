@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
-	private String filepath = "Project02Eclipse\\symptoms.txt";
+	private String filepath = Execution.INPUTFILEPATH;
 
 	/**
 	 * 
