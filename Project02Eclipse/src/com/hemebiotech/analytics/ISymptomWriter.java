@@ -1,9 +1,16 @@
 package com.hemebiotech.analytics;
 
+/**
+ * Anything that will write symptom data into an output file
+ * @author PUYJALON Pierre
+ * @since 03/11/2022
+ */
 public interface ISymptomWriter {
 
-	
-	public void write();
+	/**
+	 * Write a map in an output file
+	 */
+	public void writeMap();
 	
 	
 	

@@ -1,25 +1,24 @@
 package com.hemebiotech.analytics;
 
+/**
+ *Main class of a trend analysis program that can read from a file, sort and write symptoms with their occurrences into another file.
+ *@author PUYJALON Pierre
+ *@since 03/11/2022
+ *@version 1.0.0
+ */
 public class Execution {
 
-	/*Chemin du fichier à lire*/
-	
-	static final String INPUTFILEPATH = "Project02Eclipse\\symptoms.txt";
-
-	/*Chemin du fichier où écrire*/
-	
-	static final String OUTPUTFILEPATH = "Project02Eclipse\\results.out.txt";
-
+	/**
+	 * Main method of the trend analysis program
+	 * @param args : String array
+	 */
 	public static void main(String[] args) {
 
-
-		// Instanciation de l'objet AnalyticsCounter
-
+		// Instantiating the AnalyticsCounter Object
+		
 		AnalyticsCounter firstCounter = new AnalyticsCounter();
 
-		firstCounter.read();
-		firstCounter.sort();
-		firstCounter.write();
+		firstCounter.analyticsCounterSymptoms();
 
 	}
 

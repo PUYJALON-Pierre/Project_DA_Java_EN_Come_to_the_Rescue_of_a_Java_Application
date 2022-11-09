@@ -1,23 +1,19 @@
 package com.hemebiotech.analytics;
 
-
+/**
+ * Class that define the AnalyticCounter object
+ * @author PUYJALON Pierre
+ * @since 03/11/2022
+ */
 public class AnalyticsCounter {	
 
-	public void read() {
-		ISymptomReader reader = new ReadSymptomDataFromFile(null);
-		reader.GetSymptoms();
-	};
-
-	public void sort() {
-		ISymptomSorter sorter = new SortSymptoms();
-		sorter.occurenceSymptomsMap();
-	};
-
-	public void write() {
-		ISymptomWriter writer = new WriteSymptoms();
-		writer.write();
-	};
-
+	/**
+	 * This method can count the number of symptoms which are present in the input file and write out the result in an output file
+	 */
+	public void analyticsCounterSymptoms () {
+		ISymptomWriter writer = new ISymptomWriterImpl();
+		writer.writeMap();
+	}
 
 }
 
